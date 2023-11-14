@@ -8,7 +8,6 @@ Feature: Elements
     When user fill the email on textbox page
     When user fill the current address on textbox page
     When user fill the permanent address on textbox page
-    Then user have filled all textboxs
     When user clicks to submit button on textbox page
 
   @CheckBox

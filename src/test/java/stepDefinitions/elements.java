@@ -33,10 +33,6 @@ public class elements {
         elementsPages.fillPermanentAdr();
     }
 
-    @Then("user have filled all textboxs")
-    public void userHaveFilledAllTextboxs() {
-    }
-
     @When("user clicks to submit button on textbox page")
     public void userClicksToSubmitButtonOnTextboxPage() {
         elementsPages.clickSubmitBtn();
@@ -57,4 +53,5 @@ public class elements {
     @When("unselect the office box on checkbox page")
     public void unselectTheOfficeBoxOnCheckboxPage() {
     }
+
 }

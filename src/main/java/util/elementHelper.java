@@ -1,6 +1,7 @@
 package util;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -9,6 +10,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
+
+import static util.driverFactory.driver;
 
 public class elementHelper {
 
@@ -46,6 +49,11 @@ public class elementHelper {
         WebElement element = driver.findElement(by);
         String actualText = element.getText();
         return actualText.equals(expectedText);
+    }
+    public void scrollIntoView(By by) {
+        WebElement element = driver.findElement(by);
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].scrollIntoView(true);", element);
     }
 
 }
